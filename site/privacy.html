@@ -5,30 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lydia · Privacy</title>
 <meta name="description" content="What Lydia keeps on your computer, and what leaves it only when you use it.">
-<meta name="theme-color" content="#f4f2f7">
+<meta name="theme-color" content="#f1eefc">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,750&display=swap">
 <link rel="stylesheet" href="css/style.css">
 <style>
-  .doc { max-width: 760px; padding: 60px 0 100px; }
-  .doc h1 { margin-bottom: 36px; }
-  .doc h2 { font-size: 1.3rem; letter-spacing: -0.02em; margin: 40px 0 12px; }
+  body { background: var(--paper); color: var(--ink); }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 var(--pad); }
+  .nav { display: flex; align-items: center; height: 84px; }
+  .word { font-weight: 750; font-size: 1.2rem; text-decoration: none; letter-spacing: -0.02em; }
+  .doc { padding: 30px 0 100px; }
+  .big { font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 750; letter-spacing: -0.035em; line-height: 1; margin: 0 0 32px; }
+  .doc h2 { font-size: 1.35rem; letter-spacing: -0.02em; margin: 40px 0 12px; }
   .doc p, .doc li { color: var(--ink-2); line-height: 1.6; }
   .doc ul { padding-left: 20px; }
-  .doc a { text-decoration: underline; text-underline-offset: 3px; }
+  .doc li { margin: 6px 0; }
+  .doc code { font-size: 0.9em; }
   .doc [lang] { display: none; }
   .doc [lang].on { display: block; }
-  .langs { display: flex; gap: 6px; margin-left: auto; }
-  .langs button { height: 36px; padding: 0 14px; border-radius: 999px; background: var(--card); font-size: 0.8rem; font-weight: 600; }
-  .langs button.on { background: var(--violet); color: #fff; }
+  .langs { display: flex; gap: 4px; margin-left: auto; padding: 3px; border-radius: 999px; background: rgba(11, 11, 13, 0.07); }
+  .langs button { height: 30px; padding: 0 12px; border-radius: 999px; font-size: 12px; font-weight: 650; color: var(--ink-2); }
+  .langs button.on { background: var(--ink); color: #fff; }
+  ::selection { background: var(--violet); color: #fff; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="nav">
-    <a class="word" href="./">lydia</a>
+    <a class="word" href="./">Lydia</a>
     <div class="langs"><button data-l="en">EN</button><button data-l="pt">PT</button><button data-l="es">ES</button></div>
   </header>
 
@@ -51,6 +57,7 @@
       <ul>
         <li><b>Chat and the natural voice:</b> what you say or type goes to the engine you picked: Google Gemini (with your key) or Anthropic Claude (with your login). A local Ollama model keeps it on your computer.</li>
         <li><b>Weather:</b> <a href="https://open-meteo.com">Open-Meteo</a>, for the city you type in settings, or a rough one from your internet address (<a href="https://ipwho.is">ipwho.is</a>).</li>
+        <li><b>Lyrics:</b> when the player doesn't send them, the song's title, artist, album and length go to <a href="https://lrclib.net">lrclib.net</a>; they can be turned off in Settings.</li>
         <li><b>Speed test:</b> Cloudflare. <b>Playing a song on Spotify:</b> a DuckDuckGo search for its link.</li>
         <li><b>New versions:</b> once a day, GitHub's page of her latest release. Nothing about you is sent.</li>
         <li><b>Installing the voice:</b> the models and packages are downloaded from pypi.org, huggingface.co and github.com when you press "Install".</li>
@@ -58,7 +65,7 @@
         <li><b>WhatsApp</b>, only if you turn it on: WhatsApp Web runs inside her, linked with your QR code, and talks only to WhatsApp. Its session stays on your computer; she keeps none of your messages. A document you open from a chat is saved in your Downloads folder.</li>
       </ul>
       <h2>This site</h2>
-      <p>No cookies and no analytics. The language you pick is remembered in your browser. The fonts come from Google Fonts and the animation scripts from jsDelivr and unpkg.</p>
+      <p>No cookies and no analytics. The language you pick is remembered in your browser. The fonts come from Google Fonts.</p>
       <p>Questions: <a href="mailto:gabrieldiasdev@proton.me">gabrieldiasdev@proton.me</a></p>
     </section>
 
@@ -80,6 +87,7 @@
       <ul>
         <li><b>Conversa e voz natural:</b> o que você fala ou digita vai para o motor que você escolheu: Google Gemini (com a sua chave) ou Anthropic Claude (com o seu login). Um modelo local no Ollama mantém tudo no seu computador.</li>
         <li><b>Clima:</b> <a href="https://open-meteo.com">Open-Meteo</a>, para a cidade que você digitar nas configurações, ou uma aproximada pelo seu endereço de internet (<a href="https://ipwho.is">ipwho.is</a>).</li>
+        <li><b>Letras:</b> quando o player não manda a letra, o título, o artista, o álbum e a duração da música vão para o <a href="https://lrclib.net">lrclib.net</a>; dá para desligar nas Configurações.</li>
         <li><b>Teste de velocidade:</b> Cloudflare. <b>Tocar uma música no Spotify:</b> uma busca no DuckDuckGo pelo link.</li>
         <li><b>Versões novas:</b> uma vez por dia, a página da última versão no GitHub. Nada sobre você é enviado.</li>
         <li><b>Instalar a voz:</b> os modelos e pacotes são baixados de pypi.org, huggingface.co e github.com quando você aperta "Instalar".</li>
@@ -87,7 +95,7 @@
         <li><b>WhatsApp</b>, só se você ligar: o WhatsApp Web roda dentro dela, conectado pelo seu QR Code, e só fala com o WhatsApp. A sessão fica no seu computador; ela não guarda nenhuma mensagem sua. Um documento que você abre de uma conversa é salvo na sua pasta Downloads.</li>
       </ul>
       <h2>Este site</h2>
-      <p>Sem cookies e sem analytics. O idioma que você escolhe fica guardado no seu navegador. As fontes vêm do Google Fonts e os scripts de animação do jsDelivr e do unpkg.</p>
+      <p>Sem cookies e sem analytics. O idioma que você escolhe fica guardado no seu navegador. As fontes vêm do Google Fonts.</p>
       <p>Dúvidas: <a href="mailto:gabrieldiasdev@proton.me">gabrieldiasdev@proton.me</a></p>
     </section>
 
@@ -109,6 +117,7 @@
       <ul>
         <li><b>Chat y voz natural:</b> lo que dices o escribes va al motor que elegiste: Google Gemini (con tu clave) o Anthropic Claude (con tu sesión). Un modelo local en Ollama lo deja todo en tu computadora.</li>
         <li><b>Clima:</b> <a href="https://open-meteo.com">Open-Meteo</a>, para la ciudad que escribas en los ajustes, o una aproximada por tu dirección de internet (<a href="https://ipwho.is">ipwho.is</a>).</li>
+        <li><b>Letras:</b> cuando el reproductor no las envía, el título, el artista, el álbum y la duración de la canción van a <a href="https://lrclib.net">lrclib.net</a>; se puede apagar en los Ajustes.</li>
         <li><b>Prueba de velocidad:</b> Cloudflare. <b>Poner una canción en Spotify:</b> una búsqueda en DuckDuckGo por su enlace.</li>
         <li><b>Versiones nuevas:</b> una vez al día, la página de la última versión en GitHub. No se envía nada sobre ti.</li>
         <li><b>Instalar la voz:</b> los modelos y paquetes se descargan de pypi.org, huggingface.co y github.com cuando pulsas "Instalar".</li>
@@ -116,7 +125,7 @@
         <li><b>WhatsApp</b>, solo si lo activas: WhatsApp Web corre dentro de ella, vinculado con tu código QR, y solo habla con WhatsApp. La sesión queda en tu computadora; ella no guarda ninguno de tus mensajes. Un documento que abres desde un chat se guarda en tu carpeta Descargas.</li>
       </ul>
       <h2>Este sitio</h2>
-      <p>Sin cookies y sin analíticas. El idioma que eliges se recuerda en tu navegador. Las fuentes vienen de Google Fonts y los scripts de animación de jsDelivr y unpkg.</p>
+      <p>Sin cookies y sin analíticas. El idioma que eliges se recuerda en tu navegador. Las fuentes vienen de Google Fonts.</p>
       <p>Dudas: <a href="mailto:gabrieldiasdev@proton.me">gabrieldiasdev@proton.me</a></p>
     </section>
   </main>
