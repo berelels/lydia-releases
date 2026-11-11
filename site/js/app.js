@@ -5,7 +5,7 @@
    ============================================= */
 (() => {
   // the version shipped: every link and command below follows it (update it with each release)
-  const VERSION = '1.5.2';
+  const VERSION = '1.6.0';
   const REL = 'https://github.com/berelels/lydia-releases/releases/latest/download/';
   const PKGS = {
     deb: { file: `lydia_${VERSION}_amd64.deb`, cmd: (f) => `sudo apt install ./${f}` },
